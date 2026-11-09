@@ -29,5 +29,5 @@
   <!-- text -->
   <text x="440" y="130" fill="#FFFFFF" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="56" font-weight="700">CMK75</text>
   <text x="440" y="186" fill="url(#accent)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="44" font-weight="600">Menu Editor</text>
-  <text x="440" y="228" fill="#9FB0C3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20">Turn the screen and knob into a Stream Deck-style launcher</text>
+  <text x="440" y="228" fill="#9FB0C3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" textLength="470" lengthAdjust="spacingAndGlyphs">Turn the screen and knob into a Stream Deck-style launcher</text>
 </svg>
