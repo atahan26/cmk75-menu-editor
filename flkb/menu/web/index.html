@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMK75 Menu Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">CMK75 <span>menu editor</span></div>
+  <div class="status" id="status">loading...</div>
+  <button id="upload" class="primary" title="Save and show it on the keyboard">Upload to keyboard</button>
+</header>
+
+<main>
+  <section class="col list-col">
+    <div class="col-head">
+      <h2>Entries</h2>
+      <button id="add" class="primary small">+ Add</button>
+    </div>
+    <ol id="items" class="items"></ol>
+    <p class="hint">Drag to reorder. The knob always drives the menu: turn to move (past the last entry = next
+      screen), press to choose, hold to jump back to the first screen. Groups and option lists start with a Back entry.
+      Upload writes the menu into the keyboard screen's memory (a few seconds, once); moving around needs no uploads.</p>
+    <details class="settings">
+      <summary>Menu settings</summary>
+      <label>Hold for first screen (ms) <input id="s_open_hold_ms" type="number" min="300" max="3000" step="50"></label>
+      <label>Accent colour <input id="s_accent" type="color"></label>
+      <label>Background <input id="s_background" type="color"></label>
+      <label class="check"><input id="s_set_clock_on_start" type="checkbox"> Set the keyboard clock when the app starts</label>
+    </details>
+  </section>
+
+  <section class="col edit-col" id="editor">
+    <p class="empty">Select an entry on the left, or add one.</p>
+  </section>
+
+  <section class="col preview-col">
+    <h2>Keyboard screen</h2>
+    <div class="screen"><img id="preview" alt="preview of the keyboard screen"></div>
+    <div class="preview-tabs">
+      <button id="pv_home" class="small">Home</button>
+      <button id="pv_item" class="small">Selected entry</button>
+    </div>
+    <p class="hint">This is exactly what the 240 x 135 screen will show. Nothing reaches the keyboard until you press
+      <b>Upload to keyboard</b>.</p>
+  </section>
+</main>
+
+<dialog id="addDialog">
+  <form method="dialog" id="addForm">
+    <h2>Add an entry</h2>
+    <div class="kinds" id="kinds"></div>
+    <div id="addFields"></div>
+    <div class="dialog-buttons">
+      <button value="cancel" formnovalidate>Cancel</button>
+      <button value="ok" class="primary" id="addOk">Add</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

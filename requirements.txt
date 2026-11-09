@@ -1,0 +1,9 @@
+hidapi
+pillow
+psutil
+comtypes
+pycaw
+
+# only for tools/build_patch.py (optional, advanced)
+capstone
+keystone-engine
